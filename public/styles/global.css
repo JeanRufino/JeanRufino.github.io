@@ -7,9 +7,9 @@
 }
 
 html {
-    --black: #0D114F;
-    --white: #FAFAFA;
-    --red: #E83F5B;
+    --black: #3b3b3b;
+    --white: #f8f8f8;
+    --red: #d33333;
     --light-blue: #E0ECFF;
     --blue: #3485FF;
     --background: #FBFCFF;
@@ -36,4 +36,11 @@ html {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border-width: 0;
+}
+
+/* BODY */
+body {
+    background: var(--white);
+    max-width: 100vw;
+
 }
