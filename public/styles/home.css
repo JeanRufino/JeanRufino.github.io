@@ -51,7 +51,7 @@
     color: var(--red);
 
     will-change: transform;
-    animation: marquee 5s linear infinite;
+    animation: marquee 40s linear infinite;
     /* animation-delay: -5s; */
   }
 /*    
