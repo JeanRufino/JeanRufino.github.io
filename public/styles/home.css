@@ -1,11 +1,6 @@
-h2:first-child {
-    color: red;
+#header {
+    background: #4b4a4a70;
+    /* height: clamp(50vh, 75vh, 100vh); */
+    /* height: 50vh; */
 }
 
-h2:nth-child(3) {
-    color: blue;
-}
-
-h2:last-of-type {
-    color: green;
-}
