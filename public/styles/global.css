@@ -8,7 +8,7 @@
 
 html {
     --black: #3b3b3b;
-    --white: #f8f8f8;
+    --white: #f7f7f7;
     --red: #d33333;
     --light-blue: #E0ECFF;
     --blue: #3485FF;
@@ -24,6 +24,9 @@ html {
     --grey-modal: #040911cc;
 
     font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+
+    scroll-behavior: smooth;
 }
 
 .sr-only {
@@ -41,6 +44,23 @@ html {
 /* BODY */
 body {
     background: var(--white);
-    max-width: 100vw;
-
+    width: 100vw;
+    max-width: 100%;
 }
+
+/* SCROLLBAR */
+/* ::-webkit-scrollbar {
+    width: 16px;
+}
+  
+::-webkit-scrollbar-track {
+    width: 16px;
+}
+   
+::-webkit-scrollbar-thumb {
+    background: #d33333; 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+} */
