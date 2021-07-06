@@ -11,5 +11,5 @@ function untouch() {
     console.log('Confirmed untouch!')
 }
 
-project.addEventListener('touchend', untouch);
 project.addEventListener('touchstart', touch);
+project.addEventListener('touchend', untouch);
