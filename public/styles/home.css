@@ -186,7 +186,8 @@
     justify-content: center;
 }
 
-#projects .project-wrapper:hover a .project-content {
+#projects .project-wrapper:hover a .project-content,
+#projects .project-wrapper.active a .project-content {
     /* backdrop-filter: blur(5px); */
     opacity: 1;
 }
