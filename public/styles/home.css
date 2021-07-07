@@ -1,7 +1,4 @@
 #header {
-    /* background: #4b4a4a70; */
-    /* height: clamp(50vh, 75vh, 100vh); */
-    /* height: 50vh; */
     min-height: 20vh;
     padding: 5vh 0;
     text-align: center;
@@ -58,18 +55,36 @@
 
 /* ----------------- BANNER */
 #banner {
+    position: relative;
     display: grid;
-    grid-template-columns: 15% 60% 25%; 
-    grid-template-rows: 15vh 15vh 15vh;
+    grid-template-columns: 100%; 
+    grid-template-rows: 20vh 20vh 20vh;
     grid-template-areas:
-        "A1 B1 C1"
-        "A2 B2 C2"
-        "A3 B3 C3"
+        "A"
+        "B"
+        "C"
     ;
     border-bottom: 2px solid var(--red);
 }
 
-.marquee-wrapper { 
+#banner::after {
+    content: "";
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: -0.5px;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+
+    background-image: url(/public/images/gits-typing.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/* ----------------- MARQUEE LOOP */
+
+.marquee-scroll { 
     display: flex;
     align-items: center;
     position: relative;
@@ -78,44 +93,62 @@
     overflow-x: hidden;
     font-weight: 900;
     color: var(--red);
+    white-space: nowrap;
+    font-size: 7rem;
 }
 
 .marquee {
-    position: absolute;
-    white-space: nowrap;
-    font-size: 5.5rem;
     will-change: transform;
 }
 
-.marqueeA1 {
-    animation: marquee 40s linear infinite;
+.marqueeA {
+    animation: marquee 60s linear infinite;
+    animation-delay: -60s;
 }
   
-.marqueeB2 {
-    animation: marquee 20s linear infinite;
+.marqueeB {
+    color: transparent;
+    -webkit-text-stroke: 3px var(--red);
+    animation: marquee 60s linear infinite;
+    animation-direction: reverse;
+    animation-delay: -60s;
+
 }
 
-.marqueeC1 {
-    animation: marquee 20s linear infinite;
+.marqueeC {
+    animation: marquee 60s linear infinite;
+    animation-delay: -60s;
 }
 
-.marqueeC3 {
-    animation: marquee 15s linear infinite;
-    /* animation: none; */
+.marqueeC span {
+    color: transparent;
+    -webkit-text-stroke: 3px var(--red);
 }
 
-.marqueeC3 > img {
-    background-image: url('/public/images/jnrfn.svg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 15vh;
-    width: 15vh;
+.marqueeA:nth-child(2) {
+    animation: marquee2 60s linear infinite;
+    animation-delay: -30s;
+}
+
+.marqueeB:nth-child(2) {
+    animation: marquee2 60s linear infinite;
+    animation-delay: -30s;
+    animation-direction: reverse;
+}
+
+.marqueeC:nth-child(2) {
+    animation: marquee2 60s linear infinite;
+    animation-delay: -30s;
 }
 
 @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes marquee2 {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    100% { transform: translateX(-200%); }
 }
 
 /* -------------- MAIN SKILLS */
@@ -148,7 +181,6 @@
 
 /* -------------- MAIN PROJECTS */
 #projects {
-    /* background-image: linear-gradient(var(--black), black); */
     background-color: var(--black);
     padding: 2.4rem 2.5%;
 }
@@ -169,7 +201,7 @@
 #projects .project-wrapper a img,
 #projects .project-wrapper a .project-content {
     position: absolute;
-    top: 0;
+    top: -0.5px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -204,8 +236,9 @@
     transition: 300ms;
 }
 
-#projects .project-wrapper:hover a .project-content .text {
-    transform: translateY(0);
+#projects .project-wrapper:hover a .project-content .text, 
+#projects .project-wrapper.active a .project-content .text {
+    transform: translateY(0px);
 }
 
 /* -------------- ABOUT */
