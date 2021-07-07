@@ -58,8 +58,9 @@
 
 /* ----------------- BANNER */
 #banner {
+    position: relative;
     display: grid;
-    grid-template-columns: 15% 60% 25%; 
+    grid-template-columns: 50% 50% 50%; 
     grid-template-rows: 15vh 15vh 15vh;
     grid-template-areas:
         "A1 B1 C1"
@@ -67,6 +68,23 @@
         "A3 B3 C3"
     ;
     border-bottom: 2px solid var(--red);
+}
+
+#banner::after {
+    content: "";
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: -0.5px;
+    /* bottom: 0; */
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+
+    background-image: url(/public/images/gits-typing.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .marquee-wrapper { 
@@ -169,7 +187,7 @@
 #projects .project-wrapper a img,
 #projects .project-wrapper a .project-content {
     position: absolute;
-    top: 0;
+    top: -0.5px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -204,8 +222,9 @@
     transition: 300ms;
 }
 
-#projects .project-wrapper:hover a .project-content .text {
-    transform: translateY(0);
+#projects .project-wrapper:hover a .project-content .text, 
+#projects .project-wrapper.active a .project-content .text {
+    transform: translateY(0px);
 }
 
 /* -------------- ABOUT */
