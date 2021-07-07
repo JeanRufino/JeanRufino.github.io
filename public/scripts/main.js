@@ -1,15 +1,10 @@
-const project = document.querySelector(".project-wrapper");
-console.log(project);
+const projects = document.querySelectorAll(".project-wrapper");
 
-function touch() {
-    project.classList.add('active');
-    console.log('Confirmed touch!')
+for (const project of projects) {
+    project.addEventListener('touchstart', function touch() {
+        project.classList.add('active');
+    });
+    project.addEventListener('touchend', function untouch() {
+        project.classList.remove('active');
+    });
 }
-
-function untouch() {
-    project.classList.remove('active');
-    console.log('Confirmed untouch!')
-}
-
-project.addEventListener('touchstart', touch);
-project.addEventListener('touchend', untouch);
