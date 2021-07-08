@@ -50,6 +50,7 @@
                 <div class="marquee marqueeC">
                     <div>&nbsp;VOCÊ ME<span> ACHOU</span>! - VOCÊ ME<span> ACHOU</span>! - VOCÊ ME<span> ACHOU</span>! - </div>
                 </div>
+                <!-- scrolla pra baixo (seta) -->
                 <div class="marquee marqueeC">
                     <div>&nbsp;VOCÊ ME<span> ACHOU</span>! - VOCÊ ME<span> ACHOU</span>! - VOCÊ ME<span> ACHOU</span>! - </div>
                 </div>
@@ -58,23 +59,42 @@
 
     <main id="main">
         <section id="skills">
-            <div class="main-skills">
-                <h2>Habilidades Principais</h2>
+            <div class="summary" style="grid-area: a;">
+                <p>
+                    <!-- Com minha formação através de bootcamps de desenvolvimento web   -->
+                    <!-- Formado por bootcamps, aprendi a utilizar as principais tecnologias web para criar produtos focados em responsividade e acessibilidade. -->
+                    <span>Design</span>, <span>responsividade</span> e <span>acessibilidade</span>. Minha ideia é traduzir essas três palavras em código semântico.
+                    Sou um desenvolvedor web novato que adora ver coisas funcionando. 
+                    <br>
+                    <br>
+                    ( ? ) Possuo conhecimentos sólidos em HTML, CSS e Javascript e estou me familiarizando com o framework Vue.
+                </p>
+            </div>
+
+            <div class="skills main-skills">
+                <h2>Tecnologias Conhecidas</h2>
                 <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                    <li>Node.js</li>
-                    <li>Express.js</li>
-                    <li>Bancos de Dados SQL</li>
+                    <li>HTML, CSS & Javascript</li>
+                    <li>Node.js & Express.js</li>
+                    <li>Git</li>
+                    <li>Bancos de dados SQL</li>
+                </ul>
+            </div>
+            
+            <div class="skills other-skills">
+                <h2>Outras Tecnologias</h2>
+                <ul>
+                    <li>Familiarizado com Vue.js</li>
+                    <li>Newbie em C++</li>
                 </ul>
             </div>
 
-            <div class="other-skills">
-                <h2>Outras Habilidades</h2>
+            <div class="skills more-skills">
+                <h2>Habilidades Subjetivas</h2>
                 <ul>
-                    <li>Vue.js</li>
-                    <li>Um pouco de C++</li>
+                    <li>Buscar soluções</li>
+                    <li>CSS grid e flexbox</li>
+                    <li>Sei fazer pizza!</li>
                 </ul>
             </div>
         </section>
@@ -89,7 +109,19 @@
                     <div class="project-content">
                         <div class="text">
                             <h2>Rocket.q</h2>
-                            <p>IPSUM YADA YADA</p>
+                        </div>
+                    </div>
+                </a>
+                
+            </div>
+
+            <div class="project-wrapper">
+                <a href="#">
+                    <img src="/public/images/frazetta.jpg" alt="">
+
+                    <div class="project-content">
+                        <div class="text">
+                            <h2>PROJECT</h2>
                         </div>
                     </div>
                 </a>
@@ -101,8 +133,7 @@
 
                     <div class="project-content">
                         <div class="text">
-                            <h2>Rocket.q</h2>
-                            <p>IPSUM YADA YADA</p>
+                            <h2>PROJECT2</h2>
                         </div>
                     </div>
                 </a>
@@ -111,14 +142,33 @@
         </section>
         
         <section id="about">
-            <div class="avatar-wrapper">
+            <div class="info">
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nisl purus, tempor ut iaculis eu, bibendum eget ligula. Vestibulum ac metus neque. Donec dictum orci a felis efficitur, eu fringilla urna consectetur. Nulla tempus ullamcorper libero, ac pulvinar metus sagittis sed. In vitae lorem justo. Maecenas nibh diam, posuere id libero non, pellentesque facilisis lectus.</span>
                 <img style="height: auto;" src="/public/images/frazetta.jpg" alt="nope" width="" height="">
             </div>
         </section>
     </main>
 
     <footer id="footer">
-       
+        <div class="contact">
+            <h2>Se quiser dar um "<span>olá</span>" é só me contatar através de:</h2>
+            <div class="contact-links">
+                <div>
+                    <h3>Contatos</h3>
+                    <a href="#">+55 (21) 99920-2314</a>
+                    <a href="#">contatojeanrufino@gmail.com</a>
+                </div>
+                <div>
+                    <h3>Redes</h3> 
+                    <a href="#">Github</a>
+                    <a href="#">Linkedin</a>
+                </div>
+            </div>
+            <div class="contact-info">
+                <h2>Estou disponível para trabalhar <span>remotamente</span> ou em Rio de Janeiro - <span>RJ</span>!</h2>
+            </div>
+            <div class="copyright">© 2021 - Jean Rufino</div>
+        </div>
     </footer>
 
     <script src="/public/scripts/main.js"></script>
