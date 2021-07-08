@@ -1,8 +1,6 @@
 #header {
-    min-height: 20vh;
     padding: 2.5vh 0;
     text-align: center;
-    border-bottom: 2px solid var(--red);
 }
 
 #header a,
@@ -10,11 +8,10 @@
     display: block;
     width: max-content;
     margin: 0 auto;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 500;
     text-decoration: none;
     color: var(--black);
-
     transition: 200ms;
 }
 
@@ -63,7 +60,8 @@
         "B"
         "C"
     ;
-    border-bottom: 2px solid var(--red);
+    border-top: 16px solid var(--red);
+    border-bottom: 16px solid var(--red);
 }
 
 #banner::after {
@@ -265,42 +263,83 @@
     top: 10vh;
     left: 10vw;
     z-index: -1;
+
+    -webkit-box-shadow: -16px -16px 0px 0px var(--red);
+    box-shadow: -16px -16px 0px 0px var(--red);
 }
 
 /* -------------- FOOTER */
 #footer {
     width: 100%;
+    color: var(--white);
 }
 
 #footer .contact {
     background-color: var(--black);
     max-width: 80vw;
-    padding: 5rem 5rem 20rem 5rem;
+    padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    -webkit-box-shadow: 30px 30px 0px 0px var(--red);
+    box-shadow: 30px 30px 0px 0px var(--red);
+}
+
+#footer .contact h2 {
+    font-size: 2rem;
+    letter-spacing: 4px;
+}
+
+#footer .contact h2 span {
+    color: var(--red);
 }
 
 #footer .contact .contact-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+}
+
+#footer .contact .contact-links div {
     display: flex;
     flex-direction: column;
 }
 
-#footer .contact .contact-links > a {
+#footer .contact .contact-links div h3 {
+    padding-bottom: 1.3rem;
+    opacity: 0.3;
+}
+
+#footer .contact .contact-links div a {
     width: max-content;
+    padding-bottom: 1.3rem;
     color: var(--white);
-    padding-bottom: 1.5rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     transition: 300ms ease-in-out;
 }
 
-#footer .contact .contact-links > a:last-child {
+#footer .contact .contact-links div a:last-child {
     padding-bottom: 0; 
 }
 
-#footer .contact .contact-links > a:hover {
+#footer .contact .contact-links div a:hover {
     color: #f7f7f780;
 }
 
+#footer .contact .contact-info h2 {
+    font-weight: 500;
+}
 
+#footer .contact .copyright {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    font-size: 10px;
+    opacity: 0.3;
+}
 
 /* -------------- MEDIA QUERIES */
 @media screen and (min-width: 375px) {
