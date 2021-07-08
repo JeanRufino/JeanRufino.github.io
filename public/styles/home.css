@@ -1,8 +1,7 @@
 #header {
     min-height: 20vh;
-    padding: 5vh 0;
+    padding: 2.5vh 0;
     text-align: center;
-
     border-bottom: 2px solid var(--red);
 }
 
@@ -242,7 +241,94 @@
 }
 
 /* -------------- ABOUT */
-.avatar-wrapper > img {
-    height: 50vh;
+#about {
+    position: relative;
+    display: flex;
+    padding: 20vh 0;
+    height: max-content;
+}
+
+#about > .info {
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 500;
+    
+    max-width: 45vw;
+    margin: 0 10vw 0 45vw;
+}
+
+#about .info > img {
+    position: absolute;
+    height: auto;
     max-width: 50vw;
+
+    top: 10vh;
+    left: 10vw;
+    z-index: -1;
+}
+
+/* -------------- FOOTER */
+#footer {
+    width: 100%;
+}
+
+#footer .contact {
+    background-color: var(--black);
+    max-width: 80vw;
+    padding: 5rem 5rem 20rem 5rem;
+}
+
+#footer .contact .contact-links {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer .contact .contact-links > a {
+    width: max-content;
+    color: var(--white);
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    transition: 300ms ease-in-out;
+}
+
+#footer .contact .contact-links > a:last-child {
+    padding-bottom: 0; 
+}
+
+#footer .contact .contact-links > a:hover {
+    color: #f7f7f780;
+}
+
+
+
+/* -------------- MEDIA QUERIES */
+@media screen and (min-width: 375px) {
+    #about > .info {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #about > .info {
+        font-size: 34px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #about > .info {
+        font-size: 45px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #about > .info {
+        font-size: 48px;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    #about > .info {
+        font-size: 62px;
+    }
 }
