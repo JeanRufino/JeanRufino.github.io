@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- STYLES -->
     <link rel="stylesheet" href="/public/styles/home.css">
@@ -17,42 +18,44 @@
 </head>
 <body>
     <header id="header">
-        <div>
-            <a href="#">HABILIDADES</a>
-            <p>/</p>
-            <a href="#">PROJETOS</a>
+        <div class="name">
+            <span>JNRFN</span><br>
+            <!-- <span>Rufino</span> -->
         </div>
-        <a href="#">SOBRE MIM</a> 
-        <a href="#">CONTATOS</a>
-        <a href="#">BLOG</a>
+        <div class="links">
+            <div>
+                <a href="#">HABILIDADES</a>
+                <p>/</p>
+                <a href="#">PROJETOS</a>
+            </div>
+            <a href="#">SOBRE MIM</a> 
+            <a href="#">CONTATOS</a>
+        </div>
     </header>
 
     <section id="banner">
             <div class="marquee-scroll" style="grid-area: A;">
                 <div class="marquee marqueeA">
-                    <div>&nbsp;JNRFN - JNRFN - JNRFN - JNRFN - JNRFN - JNRFN - JNRFN - JNRFN - </div>
+                    <div>&nbsp;JNRFN - JNRFN - JNRFN - JNRFN - </div>
                 </div>
                 <div class="marquee marqueeA">
-                    <div>&nbsp;JNRFN - JNRFN - JNRFN - JNRFN - JNRFN - JNRFN - JNRFN - JNRFN - </div>
+                    <div>&nbsp;JNRFN - JNRFN - JNRFN - JNRFN - </div>
                 </div>
             </div>
-
             <div class="marquee-scroll" style="grid-area: B;">
                 <div class="marquee marqueeB">
-                    <div>&nbsp;WEBDEV / WEBDEV / WEBDEV / WEBDEV / WEBDEV / WEBDEV / WEBDEV / WEBDEV / </div>
+                    <div>&nbsp;WEBDEV / WEBDEV / WEBDEV / WEBDEV / </div>
                 </div>
                 <div class="marquee marqueeB">
-                    <div>&nbsp;WEBDEV / WEBDEV / WEBDEV / WEBDEV / WEBDEV / WEBDEV / WEBDEV / WEBDEV / </div>
+                    <div>&nbsp;WEBDEV / WEBDEV / WEBDEV / WEBDEV / </div>
                 </div>
             </div>
-
             <div class="marquee-scroll" style="grid-area: C;">
                 <div class="marquee marqueeC">
-                    <div>&nbsp;VOCÊ ME<span> ACHOU</span>! - VOCÊ ME<span> ACHOU</span>! - VOCÊ ME<span> ACHOU</span>! - </div>
+                    <div>&nbsp;SCROLL &#8681; - SCROLL &#8681; - SCROLL &#8681; - </div>
                 </div>
-                <!-- scrolla pra baixo (seta) -->
                 <div class="marquee marqueeC">
-                    <div>&nbsp;VOCÊ ME<span> ACHOU</span>! - VOCÊ ME<span> ACHOU</span>! - VOCÊ ME<span> ACHOU</span>! - </div>
+                    <div>&nbsp;SCROLL &#8681; - SCROLL &#8681; - SCROLL &#8681; - </div>
                 </div>
             </div>
     </section>
@@ -61,79 +64,59 @@
         <section id="skills">
             <div class="summary" style="grid-area: a;">
                 <p>
-                    <!-- Com minha formação através de bootcamps de desenvolvimento web   -->
-                    <!-- Formado por bootcamps, aprendi a utilizar as principais tecnologias web para criar produtos focados em responsividade e acessibilidade. -->
                     <span>Design</span>, <span>responsividade</span> e <span>acessibilidade</span>. Minha ideia é traduzir essas três palavras em código semântico.
-                    Sou um desenvolvedor web novato que adora ver coisas funcionando. 
-                    <br>
-                    <br>
-                    ( ? ) Possuo conhecimentos sólidos em HTML, CSS e Javascript e estou me familiarizando com o framework Vue.
+                    Sou um desenvolvedor web novato que adora ver coisas funcionando.  
                 </p>
             </div>
-
-            <div class="skills main-skills">
-                <h2>Tecnologias Conhecidas</h2>
-                <ul>
-                    <li>HTML, CSS & Javascript</li>
-                    <li>Node.js & Express.js</li>
-                    <li>Git</li>
-                    <li>Bancos de dados SQL</li>
-                </ul>
-            </div>
-            
-            <div class="skills other-skills">
-                <h2>Outras Tecnologias</h2>
-                <ul>
-                    <li>Familiarizado com Vue.js</li>
-                    <li>Newbie em C++</li>
-                </ul>
-            </div>
-
-            <div class="skills more-skills">
-                <h2>Habilidades Subjetivas</h2>
-                <ul>
-                    <li>Buscar soluções</li>
-                    <li>CSS grid e flexbox</li>
-                    <li>Sei fazer pizza!</li>
-                </ul>
+            <div class="redBorder">
+                <div class="skills main-skills">
+                    <h2>Tecnologias Conhecidas</h2>
+                    <ul>
+                        <li>HTML, CSS & Javascript</li>
+                        <li>Node.js & Express.js</li>
+                        <li>Bancos de dados SQL</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+                <div class="separator"></div>
+                <div class="skills other-skills">
+                    <h2>Outras Tecnologias</h2>
+                    <ul>
+                        <li>Familiarizado com Vue.js</li>
+                        <li>Newbie em C++</li>
+                    </ul>
+                </div>
+                <div class="separator"></div>
+                <div class="skills more-skills">
+                    <h2>Habilidades Subjetivas</h2>
+                    <ul>
+                        <li>Buscar soluções</li>
+                        <li>CSS grid e flexbox</li>
+                        <li>Sei fazer pizza!</li>
+                    </ul>
+                </div>
             </div>
         </section>
-
         <section id="projects">
             <h2>PROJETOS</h2>
 
-            <div class="project-wrapper">
+            <div class="project-wrapper projectOne">
                 <a href="#">
-                    <img src="/public/images/frazetta.jpg" alt="">
-
+                    <img src="/public/images/rocketq/rocketq01.png" alt="">
                     <div class="project-content">
                         <div class="text">
                             <h2>Rocket.q</h2>
                         </div>
                     </div>
                 </a>
-                
             </div>
-
-            <div class="project-wrapper">
+            <div class="project-wrapper projectTwo">
                 <a href="#">
-                    <img src="/public/images/frazetta.jpg" alt="">
+                    <img src="/public/images/exempleSite.jpg" alt="">
 
                     <div class="project-content">
                         <div class="text">
-                            <h2>PROJECT</h2>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="project-wrapper">
-                <a href="#">
-                    <img src="/public/images/frazetta.jpg" alt="">
-
-                    <div class="project-content">
-                        <div class="text">
-                            <h2>PROJECT2</h2>
+                            <h2>Project #2</h2>
                         </div>
                     </div>
                 </a>
@@ -142,9 +125,24 @@
         </section>
         
         <section id="about">
-            <div class="info">
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nisl purus, tempor ut iaculis eu, bibendum eget ligula. Vestibulum ac metus neque. Donec dictum orci a felis efficitur, eu fringilla urna consectetur. Nulla tempus ullamcorper libero, ac pulvinar metus sagittis sed. In vitae lorem justo. Maecenas nibh diam, posuere id libero non, pellentesque facilisis lectus.</span>
-                <img style="height: auto;" src="/public/images/frazetta.jpg" alt="nope" width="" height="">
+            <div class="citation">
+                <i>“É um negócio perigoso Frodo, sair pela sua porta. Você dá um passo na estrada e, se não cuidar dos seus pés, não há como saber para onde você poderá ser arrastado.”</i><br>- J.R.R.Tolkien
+            </div>     
+            <div class="wrapperTxtImg">
+                <div class="img-wrapper">
+                    <img class="avatar" src="/public/images/photographies/clickedAvatar.jpg" alt="Jean Rufino" width="" height="">
+                    <img class="avatar" src="/public/images/photographies/smileAvatar.jpg" alt="Jean Rufino" width="" height="">
+                </div>
+                <div class="aboutOne">
+                    Nerd inveterado que sou, é claro que tenho uma citação favorita de Senhor dos Anéis. 
+                    <br>
+                    E é claro que ela é sobre aventura.
+                </div>
+            </div>
+            <div class="aboutTwo">
+                Sou apaixonado por obras de ficção, adoro visuais retrô, boas cervejas e massas melhores ainda, faço meus próprios pães e estou sempre disposto a aprender coisas novas e dar um passo na estrada.
+                <br>
+                Como programador, estou munido da mesma curiosidade que tenho pelas coisas belas do mundo. E acho que isso faz toda a diferença.
             </div>
         </section>
     </main>
