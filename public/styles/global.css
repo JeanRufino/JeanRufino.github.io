@@ -1,29 +1,13 @@
 * {
-    margin: 0;
-    padding: 0;
-    border: none;
-    text-decoration: none;
     box-sizing: border-box;
-
-    /* overflow-x: hidden */
 }
 
 html {
-    --black: #101010;
+    --black: rgba(16, 16, 16);
+    --light-black: #1a1a1a;
     --white: #f7f7f7;
     --red: #d33333;
-    --light-blue: #E0ECFF;
-    --blue: #3485FF;
-    --background: #FBFCFF;
-    --overlay: #040911;
-    --icons-details: #A5B0C1;
-
-    --grey-dark: #4d5e77;
-    --grey-blue: #A1B2CD;
-    --grey-light: #E5EAF1;
-    --grey-medium: #eaecf2;
-
-    --grey-modal: #040911cc;
+    --background: #ebebeb;
 
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
@@ -45,9 +29,8 @@ html {
 
 /* BODY */
 body {
-    background: var(--white);
-    width: 100vw;
-    max-width: 100%;
+    background: var(--background);
+    overflow-x: hidden;
 }
 
 /* SCROLLBAR */
