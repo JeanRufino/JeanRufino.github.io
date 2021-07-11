@@ -43,7 +43,7 @@
 #banner {
     position: relative;
     height: 60vh;
-    background: #0000001a;
+    background: var(--banner);
     margin-bottom: 40vw;
     display: flex;
     flex-direction: column;
@@ -55,30 +55,38 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: calc(60vw - calc(60vw/5));
-    height: 75vw;
-    margin: 8vh 0 0 0;
+    /* width: calc(60vw - calc(60vw/5)); */
+    /* height: 75vw; */
+    width: 88.75vw;
+    height: 50vw;
+    margin: 25vh 0 0 0;
 }
 
 #banner .img-wrapper img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 120%;
+    width: 100%;
     height: 100%;
+    z-index: 2;
 }
 
 #banner .scroll {
     display: flex;
     align-items: center;
-    width: 100vw;
+    width: 55%;
     white-space: nowrap;
     overflow: hidden;
+    z-index: 1;
+    margin: 0 auto;
+
+    border-right: 10px solid var(--red);
+    border-left: 10px solid var(--red);
 }
 
 #banner .hello,
 #banner .scroll .marquee {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 900;
     color: var(--red);
     width: max-content;
@@ -87,13 +95,13 @@
 
 #banner .hello {
     text-align: left;
-    z-index: 2;
+    z-index: 3;
 }
 
 #banner .hello span,
 #banner .scroll .marquee {
     color: transparent;
-    -webkit-text-stroke: 1.5px var(--red);
+    -webkit-text-stroke: 1.4px var(--red);
 }
 
 #banner .scroll .marquee {
@@ -101,12 +109,12 @@
 }
 
 #banner .scroll .marquee1 {
-    animation: marquee 30s linear infinite;
+    animation: marquee 60s linear infinite;
 }
 
 #banner .scroll .marquee2 {
-    animation: marquee2 30s linear infinite;
-    animation-delay: -15s;
+    animation: marquee2 60s linear infinite;
+    animation-delay: -30s;
 }
 
 @keyframes marquee {
@@ -125,6 +133,7 @@
     flex-direction: column;
     width: 100%;
     color: var(--black);
+    padding: 5vh 0;
 }
 
 #skills .red {
@@ -267,6 +276,7 @@
 }
 
 #contact h2 {
+    font-weight: normal;
     font-size: 16px;
     letter-spacing: 2px;
     margin-bottom: 5vh;
@@ -307,7 +317,7 @@
 }
 
 #contact .contact-links div a:hover {
-    color: #f7f7f780;
+    opacity: 0.5;
 }
 
 #contact .contact-links div a:last-child {
@@ -326,11 +336,11 @@
 #about .citation,
 #about .aboutOne,
 #about .aboutTwo {
-    width: 70%;
-    margin: 0 auto 2.5vh auto;
+    width: 80%;
+    margin: 0 auto;
     color: var(--red);
     font-size: 14px;
-    font-weight: 500; 
+    font-weight: 400; 
     letter-spacing: 2px;
 }
 
@@ -341,35 +351,44 @@
 
 #about .citation {
     background-color: var(--light-black);
-    padding: 10px;
+    padding: 16px;
+    margin-bottom: 5vh;
 }
 
 #about .wrapperTxtImg {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
     height: max-content;
+    align-items: center;
 }
 
 #about .wrapperTxtImg .img-wrapper {
     position: relative;
-    height: 62.5vw;
-    width: 50vw;
-    overflow: hidden;
-    margin-left: 5vw;
-    box-shadow: 0 10px 0 0 var(--red);
+    width: 40vw;
+    height: 61.25vw;
+    justify-self: right;
+    margin-right: 2.5vw;
+}
+
+#about .wrapperTxtImg .img-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: var(--red);
 }
 
 #about .wrapperTxtImg .img-wrapper .avatar {
     position: absolute;
-    width: 50vw;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
     opacity: 1;
-    transition: 600ms ease-in-out;
+    transition: 1s ease-in-out;
     background-color: var(--background);
 } 
 
@@ -378,18 +397,19 @@
 }
 
 #about .wrapperTxtImg .aboutOne {
-    margin: 10vh 5vw;
+    margin-left: 2.5vw;
     width: 35vw;
     z-index: -1;
     color: var(--black);
 }
 
 #about .aboutTwo {
-    margin: calc(2.5vh + 10px) auto 0 auto;
+    margin: calc(5vh + 10px) auto 0 auto;
     color: var(--black);
 }
 
 #about .copyright {
+    position: relative;
     display: flex;
     justify-content: center;
     padding-top: 10vh;
@@ -399,63 +419,98 @@
 
 /* -------------- MEDIA QUERIES */
 @media screen and (min-width: 375px) {
+    #banner .hello,
+    #banner .scroll .marquee {
+        font-size: 30px;
+    }
+
     #about > .info {
         font-size: 17px;
     }
 
+    #skills .summary,
+    #skills .skills > h2,
     #skills .skills ul li {
         font-size: 16px;
     }
 }
 
-@media screen and (min-width: 768px) {
-    #about > .info {
-        font-size: 34px;
+@media screen and (min-width: 768px) {    
+    #banner .img-wrapper {
+        margin: 18vh 0 0 0;
     }
 
-    #footer .contact h2 {
+    #contact h2 {
         font-size: 24px;
     }
 
-    #footer .contact .contact-links div h3 {
+    #contact .contact-links div h3 {
         font-size: 18px;
     }
 
-    #footer .contact .contact-links div a {
+    #contact .contact-links div a {
         font-size: 20px;
     }
 
-    #footer .contact .copyright {
-        font-size: 16px;
+    #about .citation,
+    #about .aboutOne,
+    #about .aboutTwo {
+        font-size: 20px;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    #about > .info {
-        font-size: 45px;
-    }
-
     #banner {
         position: relative;
         height: 60vh;
-        background: #0000001a;
         margin-bottom: 40vh;
     }
 
     #banner .img-wrapper {
-        width: calc(60vh - calc(60vh/5));
-        height: 75vh;
+        width: 106.5vh;
+        height: 60vh;
+        margin: 14vh 0 0 0;
+    }
+
+    #banner .hello,
+    #banner .scroll .marquee {
+        font-size: 40px;
+    }
+
+    #banner .hello span,
+    #banner .scroll .marquee {
+        color: transparent;
+        -webkit-text-stroke: 2px var(--red);
+    }
+
+    #skills .summary,
+    #skills .skills > h2,
+    #skills .skills ul li {
+        font-size: 18px;
+    }
+
+    #about .citation,
+    #about .aboutOne,
+    #about .aboutTwo {
+        font-size: 24px;
+    }
+
+    #about .wrapperTxtImg .img-wrapper {
+        width: 40vh;
+        height: 61.25vh;
+        max-width: 20vw;
+        max-height: 30.625vw;        ;
+    }
+
+    #about .copyright {
+        font-size: 14px;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    #about > .info {
-        font-size: 48px;
-    }
+    
 }
 
 @media screen and (min-width: 1366px) {
-    #about > .info {
-        font-size: 62px;
-    }
+    
 }
