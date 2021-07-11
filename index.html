@@ -10,96 +10,84 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- STYLES -->
+    <link rel="stylesheet" href="/public/styles/reset.css">
     <link rel="stylesheet" href="/public/styles/home.css">
     <link rel="stylesheet" href="/public/styles/global.css">
 </head>
 <body>
     <header id="header">
-        <div class="name">
-            <span>JNRFN</span><br>
-            <!-- <span>Rufino</span> -->
-        </div>
-        <div class="links">
-            <div>
+        <span class="name">JNRFN</span>
+        <div>
+            <div class="links">
                 <a href="#">HABILIDADES</a>
-                <p>/</p>
                 <a href="#">PROJETOS</a>
             </div>
-            <a href="#">SOBRE MIM</a> 
-            <a href="#">CONTATOS</a>
+            <div class="links">
+                <a href="#">SOBRE MIM</a> 
+                <a href="#">CONTATOS</a>
+            </div>
         </div>
     </header>
-
     <section id="banner">
-            <div class="marquee-scroll" style="grid-area: A;">
-                <div class="marquee marqueeA">
-                    <div>&nbsp;JNRFN - JNRFN - JNRFN - JNRFN - </div>
-                </div>
-                <div class="marquee marqueeA">
-                    <div>&nbsp;JNRFN - JNRFN - JNRFN - JNRFN - </div>
-                </div>
+        <div class="img-wrapper">
+            <img src="/public/images/photographies/finger.png" alt="My finger pointing down.">
+        </div>
+        <div class="hello">
+            <div>OLÁ,</div>
+            <div>ME CHAMO</div>
+            <div>JEAN <span>RUFINO</span></div>
+        </div>
+        <div class="scroll">
+            <div class="marquee marquee1">
+                &nbsp;<span>/ SCROLL</span> &#129147; <span>/ SCROLL</span> &#129147; <span>/ SCROLL</span> &#129147; <span>/ SCROLL</span> &#129147; <span>/ SCROLL</span> &#129147; <span>/ SCROLL</span> &#129147; <span>/ SCROLL</span> &#129147; 
             </div>
-            <div class="marquee-scroll" style="grid-area: B;">
-                <div class="marquee marqueeB">
-                    <div>&nbsp;WEBDEV / WEBDEV / WEBDEV / WEBDEV / </div>
-                </div>
-                <div class="marquee marqueeB">
-                    <div>&nbsp;WEBDEV / WEBDEV / WEBDEV / WEBDEV / </div>
-                </div>
+            <div class="marquee marquee2">
+                &nbsp;<span>/ SCROLL</span> &#129147; <span>/ SCROLL</span> &#129147; <span>/ SCROLL</span> &#129147; <span>/ SCROLL</span> &#129147; <span>/ SCROLL</span> &#129147; <span>/ SCROLL</span> &#129147; <span>/ SCROLL</span> &#129147; 
             </div>
-            <div class="marquee-scroll" style="grid-area: C;">
-                <div class="marquee marqueeC">
-                    <div>&nbsp;SCROLL &#8681; - SCROLL &#8681; - SCROLL &#8681; - </div>
-                </div>
-                <div class="marquee marqueeC">
-                    <div>&nbsp;SCROLL &#8681; - SCROLL &#8681; - SCROLL &#8681; - </div>
-                </div>
-            </div>
+        </div>
     </section>
 
     <main id="main">
         <section id="skills">
             <div class="summary" style="grid-area: a;">
                 <p>
-                    <span>Design</span>, <span>responsividade</span> e <span>acessibilidade</span>. Minha ideia é traduzir essas três palavras em código semântico.
+                    <span class="red">Design</span>, <span class="red">responsividade</span> e <span class="red">acessibilidade</span>. Minha ideia é traduzir essas três palavras em código semântico.
                     Sou um desenvolvedor web novato que adora ver coisas funcionando.  
                 </p>
             </div>
-            <div class="redBorder">
-                <div class="skills main-skills">
-                    <h2>Tecnologias Conhecidas</h2>
-                    <ul>
-                        <li>HTML, CSS & Javascript</li>
-                        <li>Node.js & Express.js</li>
-                        <li>Bancos de dados SQL</li>
-                        <li>Git</li>
-                    </ul>
-                </div>
-                <div class="separator"></div>
-                <div class="skills other-skills">
-                    <h2>Outras Tecnologias</h2>
-                    <ul>
-                        <li>Familiarizado com Vue.js</li>
-                        <li>Newbie em C++</li>
-                    </ul>
-                </div>
-                <div class="separator"></div>
-                <div class="skills more-skills">
-                    <h2>Habilidades Subjetivas</h2>
-                    <ul>
-                        <li>Buscar soluções</li>
-                        <li>CSS grid e flexbox</li>
-                        <li>Sei fazer pizza!</li>
-                    </ul>
-                </div>
+            <div class="separator"></div>
+            <div class="skills">
+                <h2>Tecnologias Conhecidas</h2>
+                <ul>
+                    <li>HTML, <span class="red">CSS</span> & Javascript</li>
+                    <li>Node.js & Express.js</li>
+                    <li>Bancos de dados SQL</li>
+                    <li>Git</li>
+                </ul>
+            </div>
+            <div class="separator"></div>
+            <div class="skills">
+                <h2>Outras Tecnologias</h2>
+                <ul>
+                    <li>Familiarizado com Vue.js</li>
+                    <li>Newbie em C++</li>
+                </ul>
+            </div>
+            <div class="separator"></div>
+            <div class="skills">
+                <h2>Habilidades Subjetivas</h2>
+                <ul>
+                    <li>Buscar soluções rápidas</li>
+                    <li>CSS grid e flexbox</li>
+                    <li>Sei fazer pizza!</li>
+                </ul>
             </div>
         </section>
+
         <section id="projects">
             <h2>PROJETOS</h2>
-
             <div class="project-wrapper projectOne">
                 <a href="#">
                     <img src="/public/images/rocketq/rocketq01.png" alt="">
@@ -121,7 +109,25 @@
                     </div>
                 </a>
             </div>
-
+        </section>
+        
+        <section id="contact">
+            <h2>Se quiser dar um "<span>olá</span>" é só me contatar através de:</h2>
+            <div class="contact-links">
+                <div>
+                    <h3>Contatos</h3>
+                    <a href="mailto:contatojeanrufino@gmail.com?subject=Olá, Jean!">contatojeanrufino@gmail.com</a>
+                    <a href="tel:5521999202314">+55 (21) 99920-2314</a>
+                </div>
+                <div>
+                    <h3>Redes</h3> 
+                    <a target=”_blank” href="https://github.com/JeanRufino?tab=repositories">Github</a>
+                    <a target=”_blank” href="https://www.linkedin.com/in/jean-rufino-40b95113b/">Linkedin</a>
+                </div>
+            </div>
+            <div class="contact-info">
+                <h2>Estou disponível para trabalhar <span>remotamente</span> ou em Rio de Janeiro - <span>RJ</span>!</h2>
+            </div>
         </section>
         
         <section id="about">
@@ -130,8 +136,8 @@
             </div>     
             <div class="wrapperTxtImg">
                 <div class="img-wrapper">
-                    <img class="avatar" src="/public/images/photographies/clickedAvatar.jpg" alt="Jean Rufino" width="" height="">
-                    <img class="avatar" src="/public/images/photographies/smileAvatar.jpg" alt="Jean Rufino" width="" height="">
+                    <img class="avatar" src="/public/images/photographies/clickedAvatar_adobespark.png" alt="Jean Rufino" width="" height="">
+                    <img class="avatar" src="/public/images/photographies/smileAvatar_adobespark.png" alt="Jean Rufino" width="" height="">
                 </div>
                 <div class="aboutOne">
                     Nerd inveterado que sou, é claro que tenho uma citação favorita de Senhor dos Anéis. 
@@ -142,32 +148,12 @@
             <div class="aboutTwo">
                 Sou apaixonado por obras de ficção, adoro visuais retrô, boas cervejas e massas melhores ainda, faço meus próprios pães e estou sempre disposto a aprender coisas novas e dar um passo na estrada.
                 <br>
-                Como programador, estou munido da mesma curiosidade que tenho pelas coisas belas do mundo. E acho que isso faz toda a diferença.
-            </div>
-        </section>
-    </main>
-
-    <footer id="footer">
-        <div class="contact">
-            <h2>Se quiser dar um "<span>olá</span>" é só me contatar através de:</h2>
-            <div class="contact-links">
-                <div>
-                    <h3>Contatos</h3>
-                    <a href="#">+55 (21) 99920-2314</a>
-                    <a href="#">contatojeanrufino@gmail.com</a>
-                </div>
-                <div>
-                    <h3>Redes</h3> 
-                    <a href="#">Github</a>
-                    <a href="#">Linkedin</a>
-                </div>
-            </div>
-            <div class="contact-info">
-                <h2>Estou disponível para trabalhar <span>remotamente</span> ou em Rio de Janeiro - <span>RJ</span>!</h2>
+                <br>
+                Como programador, estou munido da mesma curiosidade que tenho pelas coisas belas do mundo. E acho que isso faz toda a <span>diferença</span>.
             </div>
             <div class="copyright">© 2021 - Jean Rufino</div>
-        </div>
-    </footer>
+        </section>
+    </main>
 
     <script src="/public/scripts/main.js"></script>
 </body>
