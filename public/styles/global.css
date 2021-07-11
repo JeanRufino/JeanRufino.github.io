@@ -3,11 +3,12 @@
 }
 
 html {
-    --black: rgba(16, 16, 16);
-    --light-black: #1a1a1a;
+    --black: #101010;
+    --light-black: #3b3b3b;
     --white: #f7f7f7;
     --red: #d33333;
     --background: #ebebeb;
+    --banner: #e0e0e0;
 
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
