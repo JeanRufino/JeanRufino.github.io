@@ -91,7 +91,7 @@
 }
 
 #banner .hello span,
-#banner .scroll .marquee span {
+#banner .scroll .marquee {
     color: transparent;
     -webkit-text-stroke: 1.5px var(--red);
 }
