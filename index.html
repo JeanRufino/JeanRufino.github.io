@@ -10,8 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">
     <!-- STYLES -->
+    
     <link rel="stylesheet" href="/public/styles/reset.css">
     <link rel="stylesheet" href="/public/styles/home.css">
     <link rel="stylesheet" href="/public/styles/global.css">
@@ -32,7 +34,7 @@
     </header>
     <section id="banner">
         <div class="img-wrapper">
-            <img src="/public/images/photographies/fingerDown.png" alt="My finger pointing down.">
+            <img src="/public/images/photographies/fingerDown.png" alt="Um dedo apontando para baixo.">
         </div>
         <div class="hello">
             <div>OLÁ,</div>
@@ -88,17 +90,32 @@
 
         <section id="projects" class="reveal">
             <h2>PROJETOS</h2>
-            <div class="project-wrapper projectOne">
-                <a href="#">
-                    <img src="/public/images/rocketq/rocketq01.png" alt="">
-                    <div class="project-content">
-                        <div class="text">
-                            <h2>Rocket.q</h2>
-                        </div>
-                    </div>
+
+
+
+
+            <div class="project-wrapper">
+                
+                <a class="rocketq">
+                    <img id="firstImg" class="p1" src="/public/images/rocketq/rocketq01.png" alt="Imagens do app Rocket.q">
+                    <img src="/public/images/rocketq/rocketq03.png" alt="Imagens do app Rocket.q">  
+                    <img src="/public/images/rocketq/rocketq04.png" alt="Imagens do app Rocket.q">
+                    <img src="/public/images/rocketq/rocketq05.png" alt="Imagens do app Rocket.q">
                 </a>
+                <div class="arrowWrapper">
+                    <a class="material-icons-outlined leftArrow disabled">
+                        arrow_back_ios
+                    </a>
+                    <a class="material-icons-outlined rightArrow">
+                        arrow_forward_ios
+                    </a>
+                </div>
             </div>
-            <div class="project-wrapper projectTwo">
+
+
+
+
+            <div class="project-wrapper">
                 <a href="#">
                     <img src="/public/images/exempleSite.jpg" alt="">
 
@@ -137,7 +154,7 @@
             <div class="wrapperTxtImg">
                 <div class="img-wrapper">
                     <img class="avatar" src="/public/images/photographies/blockJeanRufino.png" alt="Jean Rufino" width="" height="">
-                    <img class="avatar" src="/public/images/photographies/jeanRufino.png" alt="Jean Rufino" width="" height="">
+                    <img class="avatar" src="/public/images/photographies/jeanRufino.png" alt="Jean Rufino tapando a câmera" width="" height="">
                 </div>
                 <div class="aboutOne">
                     Nerd inveterado que sou, é claro que tenho uma citação favorita de Senhor dos Anéis. 
@@ -156,17 +173,9 @@
     </main>
 
     <noscript>
-        <div class="noscriptmsg">
-            Seu javascript está desligado. Boa sorte com isso.
-        </div>
         <style>
-            #header { display: none;}
-            #banner { display: none;}
-            #skills { display: none;}
-            #projects { display: none;}
-            #contact { display: none;}
-            #about { display: none;}
-            .noscriptmsg { color: var(--red);  text-align: center; font-size: 14px; font-weight: 900;}
+            #skills, #projects, #contact, #about 
+            { opacity: 1; transform: translateY(0);} 
         </style>
     </noscript>
 
