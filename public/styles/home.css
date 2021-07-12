@@ -25,7 +25,6 @@
 
 #header > div {
     display: flex;
-    /* justify-self: flex-end; */
     margin-right: 4vw;
 }
 
@@ -44,7 +43,7 @@
     position: relative;
     height: 60vh;
     background: var(--banner);
-    margin-bottom: 40vw;
+    margin-bottom: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,8 +54,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    /* width: calc(60vw - calc(60vw/5)); */
-    /* height: 75vw; */
     width: 88.75vw;
     height: 50vw;
     margin: 25vh 0 0 0;
@@ -300,14 +297,14 @@
 
 #contact .contact-links div h3 {
     font-size: 12px;
-    padding-bottom: 1.3rem;
+    padding-bottom: 16px;
     opacity: 0.5;
     text-transform: uppercase;
 }
 
 #contact .contact-links div a {
     width: max-content;
-    padding-bottom: 1.3rem;
+    padding-bottom: 16px;
     text-decoration: underline;
     text-decoration-thickness: 2px;
     color: var(--black);
@@ -417,6 +414,34 @@
     opacity: 0.5;
 }
 
+/* -------------- REVEALS */
+.reveal {
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 500ms ease-in-out;
+}
+
+.reveal.revealed {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.contactRev {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.contactRev.contactRevd {
+    transform: translateX(0);
+    animation: fade 600ms ease-out;
+    opacity: 1;
+}
+
+@keyframes fade {
+    from { transform: translateX(-100px); }
+    to { transform: translateX(0); }
+  }
+
 /* -------------- MEDIA QUERIES */
 @media screen and (min-width: 375px) {
     #banner .hello,
@@ -460,12 +485,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-    #banner {
-        position: relative;
-        height: 60vh;
-        margin-bottom: 40vh;
-    }
-
     #banner .img-wrapper {
         width: 106.5vh;
         height: 60vh;

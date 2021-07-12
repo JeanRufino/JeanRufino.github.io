@@ -50,7 +50,7 @@
     </section>
 
     <main id="main">
-        <section id="skills">
+        <section id="skills" class="reveal">
             <div class="summary" style="grid-area: a;">
                 <p>
                     <span class="red">Design</span>, <span class="red">responsividade</span> e <span class="red">acessibilidade</span>. Minha ideia é traduzir essas três palavras em código semântico.
@@ -86,7 +86,7 @@
             </div>
         </section>
 
-        <section id="projects">
+        <section id="projects" class="reveal">
             <h2>PROJETOS</h2>
             <div class="project-wrapper projectOne">
                 <a href="#">
@@ -111,18 +111,18 @@
             </div>
         </section>
         
-        <section id="contact">
+        <section id="contact" class="reveal">
             <h2>Se quiser dar um "<span>olá</span>" é só me contatar através de:</h2>
             <div class="contact-links">
                 <div>
                     <h3>Contatos</h3>
-                    <a href="mailto:contatojeanrufino@gmail.com?subject=Olá, Jean!">contatojeanrufino@gmail.com</a>
-                    <a href="tel:5521999202314">+55 (21) 99920-2314</a>
+                    <a class="contactRev" href="mailto:contatojeanrufino@gmail.com?subject=Olá, Jean!">contatojeanrufino@gmail.com</a>
+                    <a class="contactRev" href="tel:5521999202314">+55 (21) 99920-2314</a>
                 </div>
                 <div>
                     <h3>Redes</h3> 
-                    <a target=”_blank” href="https://github.com/JeanRufino?tab=repositories">Github</a>
-                    <a target=”_blank” href="https://www.linkedin.com/in/jean-rufino-40b95113b/">Linkedin</a>
+                    <a class="contactRev" target=”_blank” href="https://github.com/JeanRufino?tab=repositories">Github</a>
+                    <a class="contactRev" target=”_blank” href="https://www.linkedin.com/in/jean-rufino-40b95113b/">Linkedin</a>
                 </div>
             </div>
             <div class="contact-info">
@@ -130,7 +130,7 @@
             </div>
         </section>
         
-        <section id="about">
+        <section id="about" class="reveal">
             <div class="citation">
                 <i>“É um negócio perigoso Frodo, sair pela sua porta. Você dá um passo na estrada e, se não cuidar dos seus pés, não há como saber para onde você poderá ser arrastado.”</i><br><br>- J.R.R.Tolkien
             </div>     
@@ -154,6 +154,21 @@
             <div class="copyright">© 2021 - Jean Rufino</div>
         </section>
     </main>
+
+    <noscript>
+        <div class="noscriptmsg">
+            Seu javascript está desligado. Boa sorte com isso.
+        </div>
+        <style>
+            #header { display: none;}
+            #banner { display: none;}
+            #skills { display: none;}
+            #projects { display: none;}
+            #contact { display: none;}
+            #about { display: none;}
+            .noscriptmsg { color: var(--red);  text-align: center; font-size: 14px; font-weight: 900;}
+        </style>
+    </noscript>
 
     <script src="/public/scripts/main.js"></script>
 </body>
