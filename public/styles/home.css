@@ -197,37 +197,94 @@
     text-decoration: underline;
     color: var(--white );
     letter-spacing: 2px;
-    font-size: 2rem;
+    font-size: 24px;
     font-weight: 900;
     margin-bottom: 10vh;
 }
 
 #projects .project-wrapper {
     position: relative;
-    width: 70%;
+    display: flex;
+    width: 80vw;
     margin: 0 auto;
-    height: 40vh;
+    height: 45vw;
+    margin-bottom: 10vh;
+    align-items: flex-end;
+    justify-content: center;
 }
 
-#projects .projectOne {
-    margin-bottom: 10vh;
+/* --------------- START OF PROJECT SLIDER */
+#projects .project-wrapper .rocketq {
+    overflow: hidden;
+    display: flex;
+    cursor: default;
 }
 
-#projects .projectTwo {
-    margin-bottom: 10vh;
+#projects .project-wrapper .rocketq #firstImg {
+    transition: 500ms ease;
 }
+
+#projects .project-wrapper .rocketq #firstImg.p1 {
+    margin-left: 0;
+}
+
+#projects .project-wrapper .rocketq #firstImg.p2 {
+    margin-left: -100%;
+}
+
+#projects .project-wrapper .rocketq #firstImg.p3 {
+    margin-left: -200%;
+}
+
+#projects .project-wrapper .rocketq #firstImg.p4 {
+    margin-left: -300%;
+}
+
+#projects .project-wrapper .arrowWrapper {
+    position: absolute;
+    display: flex;
+    align-self: center;
+    width: 100%;
+    justify-content: space-between;
+}  
+
+#projects .project-wrapper .arrowWrapper a {
+    color: var(--red);
+    font-size: 30px;
+    font-weight: 900;
+    cursor: pointer;
+    padding: 0 12px;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#projects .project-wrapper .arrowWrapper a:active {
+    opacity: 0.5;
+    transition: 100ms ease;
+}
+
+/* --------------- END OF PROJECT SLIDER */
+#projects .project-wrapper a img {
+    object-fit: cover;
+}
+
 
 #projects .project-wrapper a img,
 #projects .project-wrapper a .project-content {
-    position: absolute;
-    top: -0.5px;
-    left: 0;
     width: 100%;
     height: 100%;
 }   
 
 #projects .project-wrapper a .project-content {
-    background-color: #555555b3;
+    position: absolute;
+    top: 0;
+
+    background-color: var(--rocketBlue);
     opacity: 0;
     transition: 300ms ease-in-out;
     animation: test 300ms;
@@ -237,25 +294,20 @@
     justify-content: center;
 }
 
-#projects .project-wrapper:hover a .project-content,
-#projects .project-wrapper.active a .project-content {
-    opacity: 1;
-}
-
-#projects .project-wrapper a img {
-    object-fit: cover;
+#projects .project-wrapper:hover a .project-content {
+    opacity: 0.9;
 }
 
 #projects .project-wrapper a .project-content .text {
-    font-weight: 500;
-    font-size: 2rem;
     color: var(--white);
+    font-size: 40px;
+    font-weight: 900;
+
     transform: translateY(50px);
     transition: 300ms;
 }
 
-#projects .project-wrapper:hover a .project-content .text, 
-#projects .project-wrapper.active a .project-content .text {
+#projects .project-wrapper:hover a .project-content .text {
     transform: translateY(0px);
 }
 
@@ -426,22 +478,6 @@
     opacity: 1;
 }
 
-.contactRev {
-    transform: translateX(-100%);
-    opacity: 0;
-}
-
-.contactRev.contactRevd {
-    transform: translateX(0);
-    animation: fade 600ms ease-out;
-    opacity: 1;
-}
-
-@keyframes fade {
-    from { transform: translateX(-100px); }
-    to { transform: translateX(0); }
-  }
-
 /* -------------- MEDIA QUERIES */
 @media screen and (min-width: 375px) {
     #banner .hello,
@@ -508,6 +544,19 @@
         font-size: 18px;
     }
 
+    #projects .project-wrapper .arrowWrapper {
+        position: absolute;
+        display: flex;
+        align-self: flex-end;
+        width: 100%;
+        padding-bottom: 20px;
+        justify-content: center;
+    }  
+    
+    #projects .project-wrapper .arrowWrapper a {
+        font-size: 50px;
+    }
+
     #about .citation,
     #about .aboutOne,
     #about .aboutTwo {
@@ -524,12 +573,4 @@
     #about .copyright {
         font-size: 14px;
     }
-}
-
-@media screen and (min-width: 1200px) {
-    
-}
-
-@media screen and (min-width: 1366px) {
-    
 }
