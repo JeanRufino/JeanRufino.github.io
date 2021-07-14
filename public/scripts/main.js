@@ -34,9 +34,7 @@ function slider(e) {
     if(e.target.classList.contains('leftArrow')) {
         sliderImg.classList.remove(`p${+ arrValue.toString()}`);
         arrValue--
-    }
-
-    if(e.target.classList.contains('rightArrow')) {
+    } else {
         arrValue++
         sliderImg.classList.add(`p${+ arrValue.toString()}`);
     }
@@ -44,7 +42,6 @@ function slider(e) {
     arrValue > 1 ? arrL.classList.remove('disabled') : arrL.classList.add('disabled');  
 
     arrValue < 4 ? arrR.classList.remove('disabled') : arrR.classList.add('disabled');  
-
 }
 
 arrL.addEventListener('click', slider);
