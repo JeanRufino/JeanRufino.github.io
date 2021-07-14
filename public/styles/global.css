@@ -7,9 +7,10 @@ html {
     --light-black: #3b3b3b;
     --white: #f7f7f7;
     --red: #d33333;
+    --red90: #d33333e6;
     --background: #ebebeb;
     --banner: #e0e0e0;
-    --rocketBlue: #3485FF;
+    --rocketBlue: #3385ffe6;
 
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
