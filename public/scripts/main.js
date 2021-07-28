@@ -2,6 +2,10 @@ const reveals = document.getElementsByClassName('reveal');
 const arrL = document.querySelector('.leftArrow');
 const arrR = document.querySelector('.rightArrow');
 const sliderImg = document.getElementById('firstImg');
+const modalBtn = document.getElementById('modalBtn');
+const modal = document.getElementById('modal');
+const body = document.querySelector('body');
+const iframe = document.querySelector('iframe');
 
 // REVEAL   ON    SCROLL
 
@@ -27,9 +31,7 @@ function reveal() {
 let arrValue = 1;
 
 function slider(e) {
-    if(e.target.classList.contains('disabled')){
-        return;
-    }
+    if(e.target.classList.contains('disabled')) return;
 
     if(e.target.classList.contains('leftArrow')) {
         sliderImg.classList.remove(`p${+ arrValue.toString()}`);
@@ -46,3 +48,13 @@ function slider(e) {
 
 arrL.addEventListener('click', slider);
 arrR.addEventListener('click', slider);
+
+// MODAL TOGGLING
+
+function toggleModal() {
+    modal.classList.toggle('hidden');
+    body.classList.toggle('modalActive');
+    modal.classList.contains('hidden') ? iframe.src = '' : iframe.src = 'https://www.youtube.com/embed/NBkX7c0Wqrk';
+}
+modalBtn.addEventListener('click', toggleModal)
+modal.addEventListener('click', toggleModal)
