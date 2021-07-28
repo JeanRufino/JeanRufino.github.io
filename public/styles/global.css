@@ -5,6 +5,7 @@
 html {
     --black: #101010;
     --light-black: #3b3b3b;
+    --light-black50: hsla(0, 0%, 23%, 0.5);
     --white: #f7f7f7;
     --red: #d33333;
     --red90: #d33333e6;
@@ -30,7 +31,6 @@ html {
     border-width: 0;
 }
 
-/* BODY */
 body {
     background: var(--background);
     overflow-x: hidden;

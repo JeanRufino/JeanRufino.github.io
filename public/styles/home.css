@@ -12,7 +12,11 @@
     font-size: 16px;
     font-weight: 500;
     color: var(--red);
-    transition: 200ms;    
+    -webkit-transition: 200ms;
+    -moz-transition: 200ms;
+    -ms-transition: 200ms;
+    -o-transition: 200ms;
+    transition: 200ms; 
 }
 
 #header .name {
@@ -64,9 +68,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 88.75vw;
-    height: 50vw;
-    margin: 25vh 0 0 0;
+    width: 81.65vw;
+    height: 46vw;
+    margin-top: 38vh;
 }
 
 #banner .img-wrapper img {
@@ -79,7 +83,7 @@
 #banner .scroll {
     display: flex;
     align-items: center;
-    width: 55%;
+    width: 160px;
     white-space: nowrap;
     overflow: hidden;
     z-index: 1;
@@ -202,11 +206,10 @@
 
 #projects > h2 {
     text-align: center;
-    text-decoration: underline;
     color: var(--white );
-    letter-spacing: 2px;
-    font-size: 24px;
-    font-weight: 900;
+    letter-spacing: 12px;
+    font-size: 18px;
+    font-weight: 500;
     margin-bottom: 10vh;
 }
 
@@ -226,8 +229,15 @@
     display: flex;
     cursor: default;
 }
+#projects .project-wrapper .rocketq img {
+    width: 80vw;
+}
 
 #projects .project-wrapper .rocketq #firstImg {
+    -webkit-transition: 500ms ease;
+    -moz-transition: 500ms ease;
+    -ms-transition: 500ms ease;
+    -o-transition: 500ms ease;
     transition: 500ms ease;
 }
 
@@ -272,9 +282,12 @@
 
 #projects .project-wrapper .arrowWrapper a:active {
     opacity: 0.5;
+    -webkit-transition: 100ms ease;
+    -moz-transition: 100ms ease;
+    -ms-transition: 100ms ease;
+    -o-transition: 100ms ease;
     transition: 100ms ease;
 }
-
 /* --------------- END OF PROJECT SLIDER */
 #projects .project-wrapper > a,
 #projects .project-wrapper > a img,
@@ -290,6 +303,10 @@
 
     background-color: var(--red90);
     opacity: 0;
+    -webkit-transition: 300ms ease-in-out;
+    -moz-transition: 300ms ease-in-out;
+    -ms-transition: 300ms ease-in-out;
+    -o-transition: 300ms ease-in-out;
     transition: 300ms ease-in-out;
     animation: test 300ms;
 
@@ -309,6 +326,10 @@
     font-weight: 900;
 
     transform: translateY(50px);
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
     transition: 300ms;
 }
 
@@ -329,16 +350,32 @@
     color: var(--white);
     font-weight: normal;
     font-size: 16px;
-    letter-spacing: 1px;
 }
 
 #projects .project-info h2 {
-    font-weight: 900;
+    font-size: 18px;
+    font-weight: 500;
     margin-bottom: 20px;
 }
 
 #projects .project-info h3 {
     line-height: 1.2;
+}
+
+#projects .project-info a {
+    text-decoration: underline;
+    cursor: pointer;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -ms-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+    line-height: 1.5;
+}
+
+#projects .project-info a:hover {
+    opacity: 0.9;
+    letter-spacing: 2px;
 }
 
 #projects .project-info h3 span {
@@ -440,6 +477,7 @@
     background-color: var(--light-black);
     padding: 16px;
     margin-bottom: 5vh;
+    color: var(--white);
 }
 
 #about .wrapperTxtImg {
@@ -508,6 +546,10 @@
 .reveal {
     transform: translateY(150px);
     opacity: 0;
+    -webkit-transition: 500ms ease;
+    -moz-transition: 500ms ease;
+    -ms-transition: 500ms ease;
+    -o-transition: 500ms ease;
     transition: 500ms ease;
 }
 
@@ -516,8 +558,44 @@
     opacity: 1;
 }
 
+/* -------------- MODAL */
+#modal {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: var(--light-black50);
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms; 
+    visibility: visible;
+    opacity: 1;
+}
+
+#modal.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+#modal iframe {
+    background: var(--black);
+    width: 80vw;
+    height: 45vw;
+}
+
 /* -------------- MEDIA QUERIES */
+
 @media screen and (min-width: 375px) {
+    #banner .scroll {
+        width: 220px;
+    }
+
     #banner .hello,
     #banner .scroll .marquee {
         font-size: 30px;
@@ -534,19 +612,25 @@
     }
 }
 
-@media screen and (min-width: 768px) {    
+@media screen and (min-width: 768px) {   
+    #banner {
+        margin-bottom: 30vh;
+    } 
+
     #banner .img-wrapper {
-        margin: 18vh 0 0 0;
+        margin-top: 36vh;
+        width: 627.03px;
+        height: 353.275px;
     }
 
     #projects .project-info h2,
     #projects .project-info h3,
     #projects .project-info h3 a {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     #contact h2 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     #contact .contact-links div h3 {
@@ -562,13 +646,24 @@
     #about .aboutTwo {
         font-size: 20px;
     }
+
+    #modal {
+        padding-right: 16px;   /* COMPENSATION FOR NO SCROLLBAR */
+    }
+
+    #modal.hidden iframe {
+        margin-right: -16px;   /* COMPENSATION FOR SCROLLBAR SHOWING UP */
+    }
+
+    body.modalActive {
+        overflow-y: hidden;
+        margin-right: 16px;   /* COMPENSATION FOR SCROLLBAR SHOWING UP */
+    }
 }
 
 @media screen and (min-width: 1024px) {
-    #banner .img-wrapper {
-        width: 106.5vh;
-        height: 60vh;
-        margin: 14vh 0 0 0;
+    #banner .scroll {
+        width: 300px;
     }
 
     #banner .hello,
@@ -593,6 +688,11 @@
         width: 124.444vh;
     }
 
+    #projects .project-wrapper .rocketq img {
+        height: 70vh;
+        width: 124.444vh;
+    }
+
     #projects .project-info {
         width: 124.444vh;
     }
@@ -613,7 +713,8 @@
     #about .citation,
     #about .aboutOne,
     #about .aboutTwo {
-        font-size: 24px;
+        font-size: 20px;
+        max-width: 60vw;
     }
 
     #about .wrapperTxtImg .img-wrapper {
@@ -625,5 +726,11 @@
 
     #about .copyright {
         font-size: 14px;
+    }
+
+    #modal iframe {
+        background: var(--black);
+        height: 70vh;
+        width: 124.444vh;
     }
 }
